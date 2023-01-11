@@ -35,6 +35,7 @@ const getOnePhone = async(setter) => {
             <p>{onePhone.screen}</p>
             <p>{onePhone.processor}</p>
             <p>{onePhone.ram}</p>
+            <img src={`../../../../assets/${onePhone.imageFileName}`}/>
             </div>
         )
 

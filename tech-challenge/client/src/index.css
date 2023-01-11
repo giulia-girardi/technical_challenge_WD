@@ -1,3 +1,10 @@
 body {
   margin: 0;
+  background-color: black;
+  color: aliceblue;
+  padding: 5%;
+}
+
+a:visited {
+  color: aliceblue;
 }

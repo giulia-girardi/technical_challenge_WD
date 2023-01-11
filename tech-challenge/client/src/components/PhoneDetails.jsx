@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import Navbar from './Navbar/Navbar';
 
 function PhoneDetails() {
     const { id } = useParams();
@@ -24,6 +25,7 @@ const getOnePhone = async(setter) => {
 
   return (
     <div>
+        <Navbar />
         {onePhone && (
             <div>
             <h4>{onePhone.manufacturer}</h4>

@@ -34,7 +34,7 @@ function PhonesListPage() {
                     </Link>
                 </div>
             )
-        }) : null}
+        }) : "Loading"}
     </div>
   )
 }

@@ -6,12 +6,8 @@ function Navbar() {
   return (
     <nav>
       <Link to="/">
-        <button>Home</button>
+        <button>Back to list</button>
       </Link>
-
-      <Link to="/about">
-        <button>About</button>
-      </Link>      
     </nav>
   );
 }

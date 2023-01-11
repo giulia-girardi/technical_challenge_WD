@@ -6,9 +6,7 @@ import PhoneDetails from './components/PhoneDetails';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      
+    <div className="App">      
       <Routes>
         <Route path="/" element={<PhonesListPage />} />
         <Route path="/phones/:id" element={<PhoneDetails />} />

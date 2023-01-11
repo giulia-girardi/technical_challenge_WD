@@ -1,0 +1,44 @@
+import React from 'react'
+import { useParams } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
+function PhoneDetails() {
+    const { id } = useParams();
+    console.log(id)
+    const [onePhone, setOnePhone] = useState('')
+const getOnePhone = async(setter) => {
+    try {
+        const onePhone = await fetch(`http://localhost:5005/phones/${id}`)  
+        const onePhoneParsed = await onePhone.json()
+        console.log(onePhoneParsed)
+        setter(onePhoneParsed)
+    }
+    catch (error) {
+        console.log(error)
+    }
+}
+    useEffect(() => {
+        getOnePhone(setOnePhone)
+    }, [])
+
+
+  return (
+    <div>
+        {onePhone && (
+            <div>
+            <h4>{onePhone.manufacturer}</h4>
+            <p>{onePhone.description}</p>
+            <p>{onePhone.color}</p>
+            <p>{onePhone.price}</p>
+            <p>{onePhone.screen}</p>
+            <p>{onePhone.processor}</p>
+            <p>{onePhone.ram}</p>
+            </div>
+        )
+
+        }
+    </div>
+  )
+}
+
+export default PhoneDetails
